@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Banking System</title>
+    <link rel="stylesheet" href="{% static 'css/userpage.css' %}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+
+</head>
+<body>
+    <div class="navbar">
+        {% if request.user.is_authenticated %}
+        <div class="banking-links">
+            <h1>My Bank</h1>
+            <a href="{% url 'banktransactions:transaction_report' %}" class="link-1" style="font-weight: bold; font-size: 20px;">Transaction Report</a>
+            <a href="{% url 'banktransactions:deposit_money' %}" style="font-weight: bold; font-size: 20px;">Deposit Money</a>
+            <a href="{% url 'banktransactions:withdraw_money' %}" class="link-3" style="font-weight: bold; font-size: 20px;">Withdraw</a>
+            <a href="{% url 'banktransactions:transfer_money' %}" class="link-4" style="font-weight: bold; font-size: 20px;">Transfer Money</a>
+            <div class="logout-button">
+                <a href="{% url 'accounts:user_logout' %}" class="logout-link" style="font-weight: bold; font-size: 16px;">Logout</a>
+            </div>
+        </div>
+
+        <div class="acc-details" style="font-weight: bold; font-size: 22px;"></div>
+
+        <div class="user-info">
+            <p>Welcome, {{ request.user.userinfo.first_name }} {{ request.user.userinfo.last_name }}</p>
+        </div>
+        <div class="accbalinfo">
+            <p>Your Account's balance is: <span style="font-weight: bold;">{{ request.user.account.balance }}</span></p>
+            <p>Hello, User! Your Account Number is: <span style="font-weight: bold;">{{ request.user.account.account_number }}</span></p>
+            <p>Your BSB Number is: <span style="font-weight: bold;">{{ request.user.branchinfo.BSB_number }}</span></p>
+        </div>
+        <div class="container">
+            <div class="caption"c>Visualizing Financial Activity: Outflows and Inflows</div>
+            <div class="chart">
+                <canvas id="transactionChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+            <div class="transactions">
+                <h2>Recent Transactions</h2>
+                <ul class="transactionlist">
+                    {% for transaction in last_ten_transactions %}
+                        <li class="listelements">
+                            <table>
+                                <tr>
+                                    <td>Amount:</td>
+                                    <td>{{ transaction.amount }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Type:</td>
+                                    <td>{{ transaction.transaction_type }}</td>
+                                </tr>
+                                <tr>
+                                    <td>From:</td>
+                                    <td>{{ transaction.first_account_number }}</td>
+                                </tr>
+                                <tr>
+                                    <td>To:</td>
+                                    <td>{{ transaction.second_account_number }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Date:</td>
+                                    <td>{{ transaction.date }}</td>
+                                </tr>
+                            </table>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+
+            <div class="sidebar">
+                <section class="services">
+                    <div class="loan box">
+                        <img src="{% static 'images/loans1.jpg' %}" alt="Loan">
+                        <a href="{% url 'banktransactions:loans' %}">Loans</a>
+                    </div>
+                </section>
+                <section class="services">
+                    <div class="cards box">
+                        <img src="{% static 'images/cards.jpg' %}" alt="Cards">
+                        <a href="#">Cards</a>
+                    </div>
+                </section>
+                <section class="services">
+                    <div class="mutualfund box">
+                        <img src="{% static 'images/insurance.jpg' %}" alt="Insurance">
+                        <a href="#">Insurance</a>
+                    </div>
+                </section>
+                <section class="services">
+                    <div class="billplay box">
+                        <img src="{% static 'images/billpay.png' %}" alt="BillPay & Recharge">
+                        <a href="#">BillPay & Recharge</a>
+                    </div>
+                </section>
+
+            </div>
+
+            <footer>
+                <p>Copyright My Bank Ltd.</p>
+                <div class="footer-links">
+                    <a href="#">Terms and Conditions</a>
+                    <span>|</span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </footer>
+
+
+        {% else %}
+        <div class="login-button">
+            <a href="{% url 'accounts:user_login' %}" class="login-link">Login</a>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        var ctx = document.getElementById('transactionChart').getContext('2d');
+
+        // Define the data for the donut chart
+        var data = {
+            labels: ['Expenses', 'Income'],
+            datasets: [{
+                data: [{{ ongoing_amount }}, {{ incoming_amount }}],
+                backgroundColor: [ 'rgba(255, 99, 132, 0.5)', 'rgba(54, 162, 235, 0.5)'],
+                borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)' ],
+                borderWidth: 1
+            }]
+        };
+
+        // Define the options for the donut chart
+        var options = {
+            responsive: true,
+            maintainAspectRatio: false,
+            title: {
+                display: true,
+                text: 'Transaction Distribution'
+            }
+        };
+
+        // Create the donut chart
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: data,
+            options: options
+        });
+
+        // Output the calculated ongoing_amount and incoming_amount to the console
+        console.log('Ongoing Amount:', {{ ongoing_amount }});
+        console.log('Incoming Amount:', {{ incoming_amount }});
+        console.log('Hello');
+    </script>
+
+
+
+
+
+</body>
+</html>

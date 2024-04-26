@@ -1,0 +1,135 @@
+
+.banking-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(21, 20, 20);
+    padding: 10px;
+}
+
+.banking-links a {
+    color: rgb(229, 229, 224);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.banking-links h1 {
+    color: rgb(210, 210, 165);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.banking-links .logout-button a.logout-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.banking-links .logout-button a.logout-link:hover {
+    background-color: #c0392b;
+}
+
+/* Styling for the home button */
+
+
+
+/* Styling for the container */
+.flex-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Align items with space between them */
+}
+
+/* Styling for the heading */
+.heading {
+    background-color: rgb(214, 211, 203); /* Dark yellow background */
+    color: rgb(108, 108, 30); /* Dark yellow text color */
+    text-align: center; /* Center align the text */
+    padding: 10px; /* Add padding for better appearance */
+    flex-grow: 1; /* Allow the heading to grow and fill the available space */
+}
+
+/* Styling for the heading text */
+.heading h1 {
+    margin: 0; /* Remove default margin for h1 */
+}
+
+
+.container {
+    width: 400px;
+    background-color: #fff; /* White background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(86, 86, 21); /* Yellow border */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Styling for the content inside the container */
+.content {
+    text-align: center; /* Center align the content */
+}
+
+/* Styling for success message */
+.success-message {
+    color: green; /* Green color for success message */
+    font-weight: bold;
+}
+
+/* Styling for error message */
+.error-message {
+    color: red; /* Red color for error message */
+    font-weight: bold;
+}
+
+/* Styling for form inputs */
+form input[type="number"],
+form select {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Styling for the submit button */
+form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Blue color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+.balanceinfo {
+    background-color: #ffffff; /* White background */
+    color: #138f3a; /* Blue text color */
+    padding: 10px; /* Add padding */
+    border: 2px solid rgb(95, 95, 35); /* Yellow border */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Add margin to separate from other content */
+}
+
+.balanceinfo p {
+    margin: 5px 0; /* Add margin to paragraphs */
+    font-weight: bold; /* Make text bold */
+    font-size: 28px; /* Increase text size */
+}

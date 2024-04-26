@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/loans.css' %}" rel="stylesheet">
+    <title>Deposit Form</title>
+</head>
+
+<body>
+
+    <div class="banking-links">
+        <a href="{% url 'home' %}" class="homebutton">
+            <h1>Home</h1>
+        </a>
+        <a href="{% url 'banktransactions:transaction_report' %}" class="link-1" style="font-weight: bold; font-size: 20px;">Transaction Report</a>
+        <a href="{% url 'banktransactions:deposit_money' %}" style="font-weight: bold; font-size: 20px;">Deposit Money</a>
+        <a href="{% url 'banktransactions:withdraw_money' %}" class="link-3" style="font-weight: bold; font-size: 20px;">Withdraw</a>
+        <a href="{% url 'banktransactions:transfer_money' %}" class="link-4" style="font-weight: bold; font-size: 20px;">Transfer Money</a>
+        <div class="logout-button">
+            <a href="{% url 'accounts:user_logout' %}" class="logout-link" style="font-weight: bold; font-size: 16px;">Logout</a>
+        </div>
+    </div>
+    <div class="quickfunds">
+        <p>Quick funds?</p>
+        <p>No loan accounts have been mapped to your account. Click on the link below to Apply Now!
+        </p>
+
+    </div>
+
+
+
+
+    <div class="loanslinks">
+        <a href="{% url 'banktransactions:personal_loan' %}" class="loan-link">
+            <img src="{% static 'images/personallaon.jpg' %}" alt="Personal Loan">
+            <span>Limited Period Offer</span>
+        </a>
+        <a href="{% url 'banktransactions:home_loan' %}" class="loan-link">
+            <img src="{% static 'images/homeloan.jpg' %}" alt="Home Loan">
+            <span>Low Interest Rates</span>
+        </a>
+        <a href="{% url 'banktransactions:business_loan' %}" class="loan-link">
+            <img src="{% static 'images/businessloan.jpg' %}" alt="Business Loan">
+            <span>Hurry Now!</span>
+        </a>
+    </div>
+
+
+</body>

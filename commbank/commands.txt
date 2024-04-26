@@ -1,0 +1,11 @@
+docker build --tag python-django .
+docker run --publish 8000:8000 python-django
+
+
+http://localhost:8000
+
+pip install reportlab
+pip install WeasyPrint
+
+ python -m pip install reportlab
+ pip install mysqlclient

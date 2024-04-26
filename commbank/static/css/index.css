@@ -1,0 +1,168 @@
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.heading-parent {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button-link:hover {
+    background-color: #2980b9;
+}
+
+
+.main-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.title {
+    color: #333333;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 94px;
+}
+
+.quote {
+    text-align: left;
+    font-style: italic;
+    color: #0d0d0c;
+    font-size: 28px;
+}
+
+
+.img-reduced-width {
+    max-width: 80%;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: -350px;
+}
+
+
+
+
+
+
+.heading-one,
+.heading-two,
+.heading-three,
+.heading-four,
+.heading-five {
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.heading-one a,
+.heading-two a,
+.heading-three a,
+.heading-four a,
+.heading-five a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.message-us {
+    color: black;
+    font-weight: bold;
+}
+
+
+
+
+.contact-us-heading,
+.quicklinks-parent,
+.about-us-info,
+.follow-link {
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.quicklinks-parent div,
+.about-us-info div {
+    margin: 5px 20px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.follow-link {
+    margin-top: 10px;
+    margin-right: 90px;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.heading-one:hover::after {
+
+    color: yellow;
+}
+
+.bottom-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000;
+    padding: 20px;
+}
+
+
+
+.bottom-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.bottom-links a:hover {
+    text-decoration: underline;
+}
+
+.bottom-links div {
+    color: black;
+}
+
+.banking-links .logout-button .logout-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.banking-links .logout-button .logout-link:hover {
+    background-color: #c0392b;
+}

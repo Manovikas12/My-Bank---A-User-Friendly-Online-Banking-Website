@@ -1,0 +1,112 @@
+
+/* Styling for the container */
+.flex-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Align items with space between them */
+}
+
+/* Styling for the heading */
+.heading {
+    background-color: rgb(214, 211, 203); /* Dark yellow background */
+    color: rgb(108, 108, 30); /* Dark yellow text color */
+    text-align: center; /* Center align the text */
+    padding: 10px; /* Add padding for better appearance */
+    flex-grow: 1; /* Allow the heading to grow and fill the available space */
+}
+
+/* Styling for the heading text */
+.heading h1 {
+    margin: 0; /* Remove default margin for h1 */
+}
+
+.transactions {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* This will center the div horizontally */
+    text-align: left; /* Align text to the left within the container */
+}
+.transactions {
+    /* Your existing styles for the transactions container */
+}
+
+.transactions ul {
+    list-style-type: none; /* Remove bullet points from the list */
+}
+
+.transactions li {
+    margin-bottom: 20px; /* Add some space between each transaction */
+    padding: 10px; /* Add padding around each transaction */
+    border: 1px solid #ccc; /* Add a border around each transaction */
+    border-radius: 5px; /* Add rounded corners to the border */
+}
+
+.transactions li h2 {
+    margin-bottom: 10px; /* Add some space below the transaction heading */
+}
+
+.transactions li p {
+    margin-bottom: 5px; /* Add some space below each transaction detail */
+}
+
+.transaction-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.transaction-table th,
+.transaction-table td {
+    border: 1px solid #ddd; /* Add borders between cells */
+    padding: 8px; /* Add padding for spacing */
+    text-align: left;
+}
+
+.transaction-table th {
+    background-color: #f2f2f2; /* Add background color to header */
+}
+
+.download-btn {
+    text-decoration: none;
+    color: #000000;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.banking-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(21, 20, 20);
+    padding: 10px;
+}
+
+.banking-links a {
+    color: rgb(229, 229, 224);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.banking-links h1 {
+    color: rgb(210, 210, 165);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.banking-links .logout-button a.logout-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.banking-links .logout-button a.logout-link:hover {
+    background-color: #c0392b;
+}

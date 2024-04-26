@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/transfermoney.css' %}" rel="stylesheet">
+    <title>Transfer Money</title>
+</head>
+<body>
+
+<div class="banking-links">
+    <a href="{% url 'home' %}" class="homebutton">
+        <h1>Home</h1>
+    </a>
+    <a href="{% url 'banktransactions:transaction_report' %}" class="link-1" style="font-weight: bold; font-size: 20px;">Transaction Report</a>
+    <a href="{% url 'banktransactions:deposit_money' %}" style="font-weight: bold; font-size: 20px;">Deposit Money</a>
+    <a href="{% url 'banktransactions:withdraw_money' %}" class="link-3" style="font-weight: bold; font-size: 20px;">Withdraw</a>
+    <a href="{% url 'banktransactions:transfer_money' %}" class="link-4" style="font-weight: bold; font-size: 20px;">Transfer Money</a>
+    <div class="logout-button">
+        <a href="{% url 'accounts:user_logout' %}" class="logout-link" style="font-weight: bold; font-size: 16px;">Logout</a>
+    </div>
+</div>
+<div class="balance-info">
+    <p>Your Current Account's balance is: {{ request.user.account.balance }}</p>
+</div>
+
+<div class="container">
+    <div class="content">
+        <h1>Transfer Money</h1>
+        {% if messages %}
+            {% for message in messages %}
+                <p class="{{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Transfer</button>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+.banking-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(21, 20, 20);
+    padding: 10px;
+}
+
+.banking-links a {
+    color: rgb(229, 229, 224);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.banking-links h1 {
+    color: rgb(210, 210, 165);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.banking-links .logout-button a.logout-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.banking-links .logout-button a.logout-link:hover {
+    background-color: #c0392b;
+}
+
+.user-info p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+}
+
+
+
+.accbalinfo {
+    font-size: 20px;
+    display: flex;
+    border: 2px solid rgb(92, 92, 18);
+    background-color: #ffffff;
+    color: #215893;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.accbalinfo p {
+    margin: 0;
+    font-size: 18px;
+    display: inline-block;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+
+
+.transactions {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.transactions h2 {
+    color: #333;
+}
+
+.transactionlist {
+    list-style-type: none;
+    padding: 0;
+}
+
+.transactionlist .listelements {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.transactionlist .listelements:hover {
+    background-color: #f0f0f0;
+}
+
+.bottom-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000;
+    padding: 20px;
+}
+
+.bottom-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.bottom-links a:hover {
+    text-decoration: underline;
+}
+
+.bottom-links div {
+    color: black;
+}
+
+.chart
+{
+    padding-top: 20px
+}
+
+
+
+.caption {
+    padding-top: 20px;
+    font-size: 20px; /* Increase text size */
+    font-weight: bold; /* Make text bold */
+    color: #654321; /* Dark brown color */
+}
+
+.download-button {
+    padding-top: 20px;
+}
+
+/* Additional styling as needed */
+
+/* styles.css */
+
+.sidebar {
+    display: flex;
+    flex-direction: row; /* Arrange items horizontally */
+}
+
+.services {
+    margin-right: 190px; /* Add space between services */
+}
+
+.services .box {
+    border: 1px solid #ccc; /* Add border to each service box */
+    padding: 10px; /* Add padding */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+.services .box img {
+    width: 100px; /* Set width for images */
+    height: 100px; /* Set height for images */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+}
+
+.services .box a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Set link color */
+}
+
+.services .box a:hover {
+    color: #555; /* Change link color on hover */
+}
+
+
+.services .box a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Set link color */
+    font-weight: bold; /* Make the text bold */
+}
+
+.services .box img {
+    width: 220px; /* Increase the width of the images */
+    height: 120px; /* Increase the height of the images */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+}
+
+
+/* footer links */
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #555;
+}
+
+.footer-links span {
+    color: #999;
+}
+

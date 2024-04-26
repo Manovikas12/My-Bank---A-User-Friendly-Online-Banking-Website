@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/transactionreport.css' %}" rel="stylesheet">
+    <title>Transaction Report</title>
+</head>
+
+<body>
+    <div class="banking-links">
+        <a href="{% url 'home' %}" class="homebutton">
+            <h1>Home</h1>
+        </a>
+        <a href="{% url 'banktransactions:transaction_report' %}" class="link-1" style="font-weight: bold; font-size: 20px;">Transaction Report</a>
+        <a href="{% url 'banktransactions:deposit_money' %}" style="font-weight: bold; font-size: 20px;">Deposit Money</a>
+        <a href="{% url 'banktransactions:withdraw_money' %}" class="link-3" style="font-weight: bold; font-size: 20px;">Withdraw</a>
+        <a href="{% url 'banktransactions:transfer_money' %}" class="link-4" style="font-weight: bold; font-size: 20px;">Transfer Money</a>
+        <div class="logout-button">
+            <a href="{% url 'accounts:user_logout' %}" class="logout-link" style="font-weight: bold; font-size: 16px;">Logout</a>
+        </div>
+    </div>
+
+<div class="heading">
+<h1> Transaction Report
+</div>
+
+<br>
+
+<div class="transactions">
+    <h1>All Transactions</h1>
+<div class="download-button">
+    <a href="{% url 'banktransactions:download_statement' %}" class="btn btn-primary">Download Statement</a>
+</div>
+
+    <table class="transaction-table">
+        <thead>
+            <tr>
+                <th>Amount</th>
+                <th>Type</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction.amount }}</td>
+                <td>{{ transaction.transaction_type }}</td>
+                <td>{{ transaction.first_account_number }}</td>
+                <td>{{ transaction.second_account_number}}</td>
+                <td>{{ transaction.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+</body>

@@ -1,0 +1,128 @@
+
+.banking-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(21, 20, 20);
+    padding: 10px;
+}
+
+.banking-links a {
+    color: rgb(229, 229, 224);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.banking-links h1 {
+    color: rgb(210, 210, 165);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.banking-links .logout-button a.logout-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.banking-links .logout-button a.logout-link:hover {
+    background-color: #c0392b;
+}
+
+/* Styling for the container */
+.container {
+    width: 400px; /* Fixed width */
+    margin: 0 auto; /* Center container horizontally */
+    margin-top: 50px; /* Add top margin */
+    background-color: #ffffff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Add padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for container */
+}
+
+/* Styling for the content inside the container */
+.content {
+    text-align: center; /* Center align the content */
+}
+
+/* Styling for form inputs */
+form input[type="number"],
+form select,
+form input[type="text"] {
+    width: calc(100% - 20px); /* Calculate width with padding */
+    margin-bottom: 10px; /* Add bottom margin */
+    padding: 10px; /* Add padding */
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    outline: none; /* Remove outline */
+}
+
+/* Styling for the submit button */
+form button[type="submit"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    background-color: #007bff; /* Blue color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor pointer */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+.flex-container {
+    display: flex; /* Use flexbox layout */
+    background-color: #3498db; /* Blue background */
+    padding: 0px 10px; /* Decrease vertical padding to 5px and keep horizontal padding at 10px */
+}
+
+
+/* Styling for the home button */
+.home-button {
+    color: #ffffff; /* White text color */
+}
+
+/* Styling for the heading */
+.heading {
+    color: rgb(209, 209, 20); /* Yellow text color */
+    margin-left: 550px; /* Adjust the margin to move "My Bank" element to the right */
+    font-size: 20px; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+}
+
+.balance-info {
+    background-color: #ffffff; /* White background */
+    color: #138f3a; /* Green text color */
+    padding: 10px; /* Add padding */
+    border: 2px solid #cccccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Add margin to separate from other content */
+}
+
+.balance-info p {
+    margin: 5px 0; /* Add margin to paragraphs */
+    font-weight: bold; /* Make text bold */
+    font-size: 28px; /* Increase text size */
+}
+
+/* CSS for success messages */
+.success {
+    color: rgb(8, 154, 8);
+    font-weight: bold;
+}
+
+/* CSS for error messages */
+.error {
+    color: rgb(96, 16, 16);
+    font-weight: bold;
+}

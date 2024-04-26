@@ -1,0 +1,120 @@
+
+.banking-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(21, 20, 20);
+    padding: 10px;
+}
+
+.banking-links a {
+    color: rgb(229, 229, 224);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.banking-links h1 {
+    color: rgb(210, 210, 165);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.banking-links .logout-button a.logout-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.banking-links .logout-button a.logout-link:hover {
+    background-color: #c0392b;
+}
+
+
+.user-info p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+}
+
+
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.services {
+    margin-bottom: 20px;
+}
+
+.services a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+
+.services a:hover {
+    text-decoration: underline;
+}
+
+
+.loanslinks {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+}
+
+.loanslinks a {
+    flex: 1;
+    margin-right: 10px; /* Adjust as needed */
+    text-align: center; /* Centers the images horizontally */
+}
+
+.loanslinks img {
+    width: 100%; /* Ensures images fill their container */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.loan-link {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #333; /* Text color */
+}
+
+.loan-link img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.loan-link span {
+    display: block;
+    margin-top: 5px;
+}
+
+.banking-links {
+    margin-bottom: 140px; /* Add margin at the bottom to create space */
+}
+
+/* styles.css */
+
+/* styles.css */
+
+.quickfunds p {
+    font-weight: bold;
+    font-size: 20px; /* You can adjust the size as needed */
+}

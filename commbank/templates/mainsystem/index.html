@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Bank</title>
+
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="heading-parent">
+        <div class="heading-one"><a href="{% url 'accounts:banking' %}">Banking</a></div>
+        <div class="heading-two"><a href="{% url 'accounts:homeloan' %}">Home Loans</a></div>
+        <div class="heading-three"><a href="{% url 'accounts:insurance' %}">Insurance</a></div>
+        <div class="heading-four"><a href="{% url 'accounts:investing' %}">Investing</a></div>
+        <div class="heading-five"><a href="{% url 'accounts:business' %}">Business</a></div>
+        <a href="{% url 'accounts:user_login' %}" class="button-link">Login</a>
+    </div>
+
+    <div class="main-info">
+        <div>
+            <h1 class="title">My Bank</h1>
+            <p class="quote">Invest in your dreams. Secure your future with My Bank</p>
+        </div>
+        <div>
+            <!-- Placeholder for image -->
+            <img src="{% static 'images/comm-bank-picture.png' %}" alt="Image" class="img-reduced-width">
+
+        </div>
+    </div>
+
+    <div class="bottom-links">
+
+        <div class="contact-us-heading">
+            <h1>Contact us</h1>
+            <p class="message-us">Message us, ask our virtual assistant, or call to connect to the right help</p>
+        </div>
+
+        <div class="quicklinks-parent">
+            <div class="quicklink-haeding">QUICK LINKS</div>
+            <div class="quicklink-1"><a href="{% url 'accounts:security' %}">Security & scams</a></div>
+            <div class="quicklink-2"><a href="{% url 'accounts:help' %}">Help & support</a></div>
+            <div class="quicklink-3"><a href="{% url 'accounts:financial_assistance' %}">Financial assistance</a></div>
+            <div class="quicklink-4"><a href="{% url 'accounts:complaints' %}">Complaints & compliments</a></div>
+            <div class="quicklink-5"><a href="{% url 'accounts:payment_services' %}">Payment services availability</a></div>
+        </div>
+
+        <div class="about-us-info">
+            <div class="about-us-heading">ABOUT US</div>
+            <div class="about-us-1"><a href="{% url 'accounts:about_us' %}">About CommBank</a></div>
+            <div class="about-us-2"><a href="{% url 'accounts:careers' %}">Careers at CommBank</a></div>
+            <div class="about-us-3"><a href="{% url 'accounts:sustainability' %}">Sustainability</a></div>
+            <div class="about-us-4"><a href="{% url 'accounts:newsroom' %}">Newsroom</a></div>
+            <div class="about-us-5"><a href="{% url 'accounts:investor_centre' %}">Investor centre</a></div>
+        </div>
+
+        <div class="follow-link">
+            <div>FOLLOW US</div>
+            <div>X</div>
+            <div><a href="{% url 'accounts:facebook' %}">Facebook</a></div>
+            <div><a href="{% url 'accounts:linkedin' %}">LinkedIn</a></div>
+            <div><a href="{% url 'accounts:youtube' %}">YouTube</a></div>
+            <div><a href="{% url 'accounts:instagram' %}">Instagram</a></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
