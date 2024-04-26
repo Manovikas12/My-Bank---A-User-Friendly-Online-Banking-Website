@@ -1,0 +1,2 @@
+# My Bank - A User-Friendly Online Banking Website
+ MyBank is a comprehensive online banking platform developed to offer users a range of essential banking services. •User Authentication •Account Management: Users can view account balances, transaction history. •Funds Transfer: Securely transfer funds between accounts. •Deposits: Users can make deposits. •Withdrawals: Users can initiate withdrawals from their accounts with ease. •Transaction Reporting: Comprehensive transaction reporting allows users to view detailed transaction histories
